@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/card.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="./img/pokebola.png" type="image/x-icon">
+
+</head>
+<body>
+<header class="menu">
+    <img class="menu-img" src="./img/pokebola.png" alt="Imagem de pokebola">
+    <p class="menu-texto">Pokédex: <br>Os pokémons originais!</p>
+</header>
+<section class="titulos">
+    <div class="busca-nome">
+        <h1 class="busca-titulo">Buscar Pokemon</h1>
+        <input type="text" name="busca-pokemon" id="busca-pokemon" placeholder="Ex: Abra">
+        <button class="busca-btn">Pesquisar</button>
+    </div>
+
+
+    <div class="busca-elemento">
+        <label for="elementos" class="elemento-titulo">Buscar Pokemons pelo elemento:</label>
+        <select name="elementos" id="elementos">
+            <option  class="elemento-option" value="initial">Início</option>
+            <option  class="elemento-option" value="all">Todos</option>
+            <option  class="elemento-option" value="fire">Fogo</option>
+            <option  class="elemento-option" value="water">Água</option>
+            <option  class="elemento-option" value="grass">Grama</option>
+            <option  class="elemento-option" value="poison">Veneno</option>
+            <option  class="elemento-option" value="electric">Elétrico</option>
+            <option  class="elemento-option" value="ice">Gelo</option>
+            <option  class="elemento-option" value="dragon">Dragão</option>
+            <option  class="elemento-option" value="ground">Terra</option>
+            <option  class="elemento-option" value="fairy">Fada</option>
+            <option  class="elemento-option" value="psychic">Psíquico</option>
+            <option  class="elemento-option" value="bug">Inseto</option>
+            <option  class="elemento-option" value="fighting">Lutador</option>
+            <option  class="elemento-option" value="rock">Pedra</option>
+            <option  class="elemento-option" value="ghost">Fantasma</option>
+            <option  class="elemento-option" value="normal">Normal</option>
+        </select>
+    </div>
+
+</section>
+
+<main class="conteudo">
+</main>
+<section class="btn-exibir">
+    <button class="btn">Exibir Mais</button>
+</section>
+
+<script src="./js/main.js" ></script>
+<script src="./js/buscaPokemon.js"></script>
+<script src="./js/exibirMais.js" ></script>
+<script src="./js/buscaElemento.js"></script>
+</body>
+</html>
