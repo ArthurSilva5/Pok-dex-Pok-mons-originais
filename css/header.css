@@ -44,15 +44,48 @@
     text-align: center;
 }
 
-@media only screen and (max-width: 530px) {
+@media only screen and (max-width: 800px) {
     .menu{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(163, 22, 22);
+        font-family: Verdana, sans-serif;
+        font-size: 22px;
+        color: white;
+    }
+    .menu-texto{
+        word-break: break-word;
+        padding: 10px 5px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    
+    .menu-img{
+        width: 18%;
+        padding: none;
+        margin: none;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .menu{
+        display: flex;
+        justify-content: center;
         align-items: center;
         background-color: rgb(163, 22, 22);
         font-family: Verdana, sans-serif;
         font-size: 18px;
         color: white;
+    }
+
+    .menu-texto{
+        word-break: break-word;
+        padding: 10px 5px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
     }
 
     .menu-img{
@@ -62,14 +95,3 @@
 
 }
 
-@media only screen and (max-width: 800px) {
-    .menu{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: rgb(163, 22, 22);
-        font-family: Verdana, sans-serif;
-        font-size: 22px;
-        color: white;
-    }
-}

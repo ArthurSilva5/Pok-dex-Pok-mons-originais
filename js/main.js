@@ -14,15 +14,21 @@ function exibePokemons(){
     const conteudo = document.querySelector('.conteudo');
     conteudo.appendChild(card)
 
+    const elementosBR = ['Fogo','Água','Grama','Veneno','Elétrico','Gelo','Dragão','Terra','Fada','Psíquico','Inseto','Lutador','Pedra','Fantasma','Normal'];
+
+    const elementosEN = ['fire','water','grass','poison','electric','ice','dragon','ground','fairy','psychic','bug','fighting','rock','ghost','normal']
+
     listaDePokemons.forEach( pokemon => {
         const nomeDoPokemon = pokemon.name;
         const nomeDoPokemonAtualizado = nomeDoPokemon[0].toUpperCase() + nomeDoPokemon.substring(1)
-        const elemento = pokemon.types[0].type.name;
+        let elemento = pokemon.types[0].type.name;
+
+        const index = elementosEN.indexOf(elemento);
 
         card.innerHTML = `
         <h3 class="card-titulo">${pokemon.id} - ${nomeDoPokemonAtualizado}</h3>
         <img class="card-imagem" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="Imagem do pokemon">
-        <p class="card-descricao">Elemento: ${elemento[0].toUpperCase() + elemento.substring(1)}</p>
+        <p class="card-descricao">Elemento: ${elementosBR[index]}</p>
     `
     })
 }
