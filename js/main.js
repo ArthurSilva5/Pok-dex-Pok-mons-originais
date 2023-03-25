@@ -1,6 +1,7 @@
 let listaDePokemons = [];
 async function buscaURL(){
     for(let i = 1; i <= 12; i++){
+        // Requisição das informações individuais
         const conexao = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
         const conexaoAtualizada = await conexao.json();
         listaDePokemons.push(conexaoAtualizada)
@@ -8,6 +9,7 @@ async function buscaURL(){
     }
 }
 
+let contador = 0;
 function exibePokemons(){
     const card = document.createElement('div');
     card.classList.add('card');
@@ -22,18 +24,16 @@ function exibePokemons(){
         const nomeDoPokemon = pokemon.name;
         const nomeDoPokemonAtualizado = nomeDoPokemon[0].toUpperCase() + nomeDoPokemon.substring(1)
         let elemento = pokemon.types[0].type.name;
-
         const index = elementosEN.indexOf(elemento);
 
         card.innerHTML = `
         <h3 class="card-titulo">${pokemon.id} - ${nomeDoPokemonAtualizado}</h3>
         <img class="card-imagem" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="Imagem do pokemon">
-        <p class="card-descricao">Elemento: ${elementosBR[index]}</p>
+        <p class="card-elemento">Elemento: ${elementosBR[index]}</p>
     `
     })
+    contador = contador +1;
 }
-        
+
 buscaURL();
-
-
 

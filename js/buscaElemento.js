@@ -9,7 +9,7 @@ async function buscaElemento(){
     btnExibirMais.forEach(botao => botao.remove());
 
     const elementoEscolhido = elementos.options[elementos.selectedIndex];
-    for(let i = 1; i <= 150; i++){
+    for(let i = 1; i <= 151; i++){
     const requisicao = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
     const resposta = await requisicao.json();
     if(resposta.types[0].type.name === elementoEscolhido.value){

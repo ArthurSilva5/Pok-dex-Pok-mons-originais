@@ -17,7 +17,7 @@ function buscarPokemon(nome){
         }
       })
       .then(dados => {
-        if(dados.id > 150){
+        if(dados.id > 151){
           alert("Este pokémon não é da lista original!")
         }
         else{

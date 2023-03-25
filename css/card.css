@@ -47,12 +47,13 @@
     background-color: var(--cinza);
 }
 
-.card-descricao{
+.card-elemento{
     text-align: center;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
+
 
 @media only screen and (min-width: 800px){
     .card{

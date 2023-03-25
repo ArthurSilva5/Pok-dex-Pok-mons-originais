@@ -1,9 +1,10 @@
 async function buscaPokemon(idInicial, idFinal) {
     for(let i = idInicial; i <= idFinal; i++){
+        // Requisição da informações específicas do pokémon
         const conexao = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
         const conexaoAtualizada = await conexao.json();
         listaDePokemons.push(conexaoAtualizada);
-        if(i > 150){
+        if(i > 151){
             break;
         }
         exibePokemons();
